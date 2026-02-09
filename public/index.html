@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Refinamento de Alinhadores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+    form {
+      max-width: 700px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      margin-top: 25px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Formulário de Refinamento de Alinhadores</h1>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+  <h2>Dados do Dentista</h2>
+  <label>Nome</label>
+  <input type="text" name="dentista_nome" required>
+
+  <label>CRO + UF</label>
+  <input type="text" name="cro" required>
+
+  <label>E-mail</label>
+  <input type="email" name="email" required>
+
+  <label>WhatsApp</label>
+  <input type="tel" name="telefone" required>
+
+  <h2>Paciente</h2>
+  <label>Nome</label>
+  <input type="text" name="paciente_nome" required>
+
+  <label>Data de nascimento</label>
+  <input type="date" name="nascimento" required>
+
+  <h2>Refinamento</h2>
+  <label>Motivo / Queixa principal</label>
+  <textarea name="motivo" rows="4"></textarea>
+
+  <h2>Arquivos STL</h2>
+  <label>Arcada Superior (.stl)</label>
+  <input type="file" name="stl_superior" accept=".stl" required>
+
+  <label>Arcada Inferior (.stl)</label>
+  <input type="file" name="stl_inferior" accept=".stl" required>
+
+  <button type="submit">Enviar caso para refinamento</button>
+</form>
+
+</body>
+</html>
